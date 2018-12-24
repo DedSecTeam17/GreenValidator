@@ -8,16 +8,16 @@
 
     $result = $valdiation->validate(
         [
-            'Mohammed Elamin' => 'string|min:6|max:19',
+            'Mohammed Elamin' => 'string|min:6|max:15',
             'mohamed13374' => 'string|max:255|min:2',
             'mohammed@ahoo.com' => 'email',
-            'asd' => 'string',
+            '2019' => 'number',
             '5.55' => 'float'
         ])->execute();
 
 
     if ($result->getisValid()) {
-        echo 'validated';
+        echo 'validated !! attempt to insert data successfully';
 
     } else {
         echo $result->getMessage();

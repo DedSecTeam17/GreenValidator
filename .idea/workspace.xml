@@ -1,33 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a202f4c-8790-425d-b200-21eb18eafc97" name="Default Changelist" comment="" />
+    <list default="true" id="9a202f4c-8790-425d-b200-21eb18eafc97" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example.php" beforeDir="false" afterPath="$PROJECT_DIR$/Example.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GreenValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/GreenValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GreenValidator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="147" column="53" selection-start-line="147" selection-start-column="53" selection-end-line="147" selection-end-column="53" />
+            <state relative-caret-position="-2246">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
-                <element signature="e#164#3980#0#PHP" expanded="true" />
                 <element signature="n#__construct#0;n#GreenValidator#0;n#!!top" expanded="true" />
                 <element signature="n#isNumber#0;n#GreenValidator#0;n#!!top" expanded="true" />
-                <element signature="e#482#520#0#PHP" expanded="true" />
                 <element signature="n#isEmail#0;n#GreenValidator#0;n#!!top" expanded="true" />
                 <element signature="n#isStringOnly#0;n#GreenValidator#0;n#!!top" expanded="true" />
                 <element signature="n#max#0;n#GreenValidator#0;n#!!top" expanded="true" />
                 <element signature="n#min#0;n#GreenValidator#0;n#!!top" expanded="true" />
-                <element signature="e#1079#3447#0#PHP" expanded="true" />
-                <element signature="e#3458#3973#0#PHP" expanded="true" />
-                <marker date="1544989680242" expanded="true" signature="835:854" ph="..." />
-                <marker date="1544989680242" expanded="true" signature="4048:4083" ph="..." />
+                <element signature="n#validate#0;n#GreenValidator#0;n#!!top" expanded="true" />
+                <element signature="n#execute#0;n#GreenValidator#0;n#!!top" expanded="true" />
+                <marker date="1545670250835" expanded="true" signature="843:862" ph="..." />
               </folding>
             </state>
           </provider>
@@ -36,24 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Example.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-              <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GreenValidatorTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-              <folding>
-                <element signature="n#testValidate#0;n#GreenValidatorTest#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="17" selection-end-line="23" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -61,48 +63,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="253">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
               <folding>
-                <element signature="e#231#271#0#PHP" expanded="true" />
-                <element signature="n#getisValid#0;n#Validation#0;n#!!top" expanded="true" />
-                <element signature="e#373#421#0#PHP" expanded="true" />
                 <element signature="n#setIsValid#0;n#Validation#0;n#!!top" expanded="true" />
-                <element signature="e#541#581#0#PHP" expanded="true" />
                 <element signature="n#getMessage#0;n#Validation#0;n#!!top" expanded="true" />
-                <element signature="e#683#731#0#PHP" expanded="true" />
                 <element signature="n#setMessage#0;n#Validation#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="397">
+                <caret line="50" column="69" lean-forward="true" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Validation.php" />
         <option value="$PROJECT_DIR$/GreenValidatorTest.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Example.php" />
         <option value="$PROJECT_DIR$/GreenValidator.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="202" />
-    <option name="y" value="-8" />
+    <option name="x" value="57" />
+    <option name="y" value="294" />
     <option name="width" value="874" />
     <option name="height" value="735" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="NBKnowledgePane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,17 +124,29 @@
               <item name="GreenValidator" type="b2602c69:ProjectViewProjectNode" />
               <item name="GreenValidator" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GreenValidator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projects\GreenValidator" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -135,15 +161,10 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="GreenValidatorTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="GreenValidatorTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner class="GreenValidatorTest" file="$PROJECT_DIR$/GreenValidatorTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHPUnit.GreenValidatorTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -157,7 +178,17 @@
       <updated>1544964703238</updated>
       <workItem from="1544964704852" duration="36000" />
       <workItem from="1544964767238" duration="2658000" />
-      <workItem from="1544971563997" duration="11912000" />
+      <workItem from="1544971563997" duration="12414000" />
+      <workItem from="1545022063392" duration="1097000" />
+      <workItem from="1545023536507" duration="567000" />
+      <workItem from="1545024134230" duration="176000" />
+      <workItem from="1545024335545" duration="74000" />
+      <workItem from="1545024433701" duration="2053000" />
+      <workItem from="1545031991598" duration="253000" />
+      <workItem from="1545032895765" duration="502000" />
+      <workItem from="1545060464333" duration="639000" />
+      <workItem from="1545670210710" duration="1379000" />
+      <workItem from="1545686810014" duration="1020000" />
     </task>
     <servers />
   </component>
@@ -167,16 +198,16 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14606000" />
+    <option name="totallyTimeSpent" value="22868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14447807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="PHP-CGI Server" />
+      <window_info id="DB Browser" order="3" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32991454" />
@@ -186,75 +217,70 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32991454" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
+      <window_info anchor="bottom" id="DB Execution Console" order="13" />
+      <window_info anchor="bottom" id="Tail" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/GreenValidatorTest.php" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Validation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="253">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding>
-            <element signature="e#231#271#0#PHP" expanded="true" />
-            <element signature="n#getisValid#0;n#Validation#0;n#!!top" expanded="true" />
-            <element signature="e#373#421#0#PHP" expanded="true" />
             <element signature="n#setIsValid#0;n#Validation#0;n#!!top" expanded="true" />
-            <element signature="e#541#581#0#PHP" expanded="true" />
             <element signature="n#getMessage#0;n#Validation#0;n#!!top" expanded="true" />
-            <element signature="e#683#731#0#PHP" expanded="true" />
             <element signature="n#setMessage#0;n#Validation#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Example.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GreenValidatorTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="n#testValidate#0;n#GreenValidatorTest#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GreenValidator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="147" column="53" selection-start-line="147" selection-start-column="53" selection-end-line="147" selection-end-column="53" />
+        <state relative-caret-position="-2246">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#164#3980#0#PHP" expanded="true" />
             <element signature="n#__construct#0;n#GreenValidator#0;n#!!top" expanded="true" />
             <element signature="n#isNumber#0;n#GreenValidator#0;n#!!top" expanded="true" />
-            <element signature="e#482#520#0#PHP" expanded="true" />
             <element signature="n#isEmail#0;n#GreenValidator#0;n#!!top" expanded="true" />
             <element signature="n#isStringOnly#0;n#GreenValidator#0;n#!!top" expanded="true" />
             <element signature="n#max#0;n#GreenValidator#0;n#!!top" expanded="true" />
             <element signature="n#min#0;n#GreenValidator#0;n#!!top" expanded="true" />
-            <element signature="e#1079#3447#0#PHP" expanded="true" />
-            <element signature="e#3458#3973#0#PHP" expanded="true" />
-            <marker date="1544989680242" expanded="true" signature="835:854" ph="..." />
-            <marker date="1544989680242" expanded="true" signature="4048:4083" ph="..." />
+            <element signature="n#validate#0;n#GreenValidator#0;n#!!top" expanded="true" />
+            <element signature="n#execute#0;n#GreenValidator#0;n#!!top" expanded="true" />
+            <marker date="1545670250835" expanded="true" signature="843:862" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Example.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="17" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="397">
+            <caret line="50" column="69" lean-forward="true" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

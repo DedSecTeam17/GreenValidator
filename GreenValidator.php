@@ -11,8 +11,7 @@
 
     class GreenValidator
     {
-
-
+        
 //        ^ start with
         private $validation_result = array();
 
@@ -78,7 +77,7 @@
                         $max_value = $max[1];
                         $this->max($data, $max_value)
                             ?:
-                            array_push($this->validation_result, $data . "\t" . ' must be at least equal or greater then ' . $max_value);
+                            array_push($this->validation_result, $data . "\t" . ' must be at least equal or less then ' . $max_value);
 
                     }
 //                    email validation

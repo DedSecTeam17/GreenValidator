@@ -1,7 +1,7 @@
-# GreenValidator
+ GreenValidator
 ![GitHub Logo](leaf.png)
-###green validator it,s a php lib for form validation
-########types of validation on this version :
+green validator it,s a php lib for form validation
+ypes of validation on this version :
 1. Email 
 2. Numbers
 3. String

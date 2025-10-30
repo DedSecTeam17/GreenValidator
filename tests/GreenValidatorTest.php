@@ -254,4 +254,35 @@ class GreenValidatorTest extends TestCase
         $errors = $this->validator->getErrors();
         $this->assertCount(2, $errors);
     }
+
+    public function testSetMessageSeparator(): void
+    {
+        $result = $this->validator->setMessageSeparator("\n")->validate([
+            'invalid-email' => 'email',
+            'abc' => 'number',
+        ])->execute();
+
+        $this->assertFalse($result->isValid());
+        $this->assertStringContainsString("\n", $result->getMessage());
+        $this->assertStringNotContainsString('<br>', $result->getMessage());
+    }
+
+    public function testConfirmedValidationWithRule(): void
+    {
+        $result = $this->validator->validate([
+            'password123' => 'confirmed:password123',
+        ])->execute();
+
+        $this->assertTrue($result->isValid());
+    }
+
+    public function testConfirmedValidationWithRuleFailure(): void
+    {
+        $result = $this->validator->validate([
+            'password123' => 'confirmed:differentpassword',
+        ])->execute();
+
+        $this->assertFalse($result->isValid());
+        $this->assertStringContainsString('does not match', $result->getMessage());
+    }
 }

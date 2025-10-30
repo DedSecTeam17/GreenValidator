@@ -12,6 +12,7 @@ namespace GreenValidator;
 class GreenValidator
 {
     private array $validationResult = [];
+    private string $messageSeparator = '<br>';
 
     /**
      * Validate if value is a number
@@ -235,17 +236,17 @@ class GreenValidator
     private function applyParameterizedRule(mixed $data, string $ruleName, string $params): void
     {
         match ($ruleName) {
-            'min' => $this->min($data, (int)$params) 
-                ?: array_push($this->validationResult, "$data must be at least $params characters"),
-            'max' => $this->max($data, (int)$params) 
-                ?: array_push($this->validationResult, "$data must be at most $params characters"),
+            'min' => !$this->min($data, (int)$params) 
+                ? array_push($this->validationResult, "$data must be at least $params characters") : null,
+            'max' => !$this->max($data, (int)$params) 
+                ? array_push($this->validationResult, "$data must be at most $params characters") : null,
             'between' => $this->validateBetween($data, $params),
             'in' => $this->validateIn($data, $params),
-            'regex' => $this->matchesRegex($data, $params) 
-                ?: array_push($this->validationResult, "$data does not match required pattern"),
-            'date' => $this->isDate($data, $params) 
-                ?: array_push($this->validationResult, "$data is not a valid date with format $params"),
-            'confirmed' => null, // Requires special handling with two fields
+            'regex' => !$this->matchesRegex($data, $params) 
+                ? array_push($this->validationResult, "$data does not match required pattern") : null,
+            'date' => !$this->isDate($data, $params) 
+                ? array_push($this->validationResult, "$data is not a valid date with format $params") : null,
+            'confirmed' => $this->validateConfirmed($data, $params),
             default => array_push($this->validationResult, "Unknown validation rule: $ruleName")
         };
     }
@@ -256,34 +257,34 @@ class GreenValidator
     private function applySimpleRule(mixed $data, string $rule): void
     {
         match ($rule) {
-            'email' => $this->isEmail($data) 
-                ?: array_push($this->validationResult, "$data is not a valid email"),
-            'string' => $this->isStringOnly($data) 
-                ?: array_push($this->validationResult, "$data is not a valid string"),
-            'number' => $this->isNumber($data) 
-                ?: array_push($this->validationResult, "$data is not a valid number"),
-            'float' => $this->isFloat($data) 
-                ?: array_push($this->validationResult, "$data is not a valid float"),
-            'alpha' => $this->isAlpha($data) 
-                ?: array_push($this->validationResult, "$data must contain only letters"),
-            'alphanumeric' => $this->isAlphaNumeric($data) 
-                ?: array_push($this->validationResult, "$data must be alphanumeric"),
-            'url' => $this->isUrl($data) 
-                ?: array_push($this->validationResult, "$data is not a valid URL"),
-            'ip' => $this->isIp($data) 
-                ?: array_push($this->validationResult, "$data is not a valid IP address"),
-            'ipv4' => $this->isIpv4($data) 
-                ?: array_push($this->validationResult, "$data is not a valid IPv4 address"),
-            'ipv6' => $this->isIpv6($data) 
-                ?: array_push($this->validationResult, "$data is not a valid IPv6 address"),
-            'json' => $this->isJson($data) 
-                ?: array_push($this->validationResult, "$data is not valid JSON"),
-            'date' => $this->isDate($data) 
-                ?: array_push($this->validationResult, "$data is not a valid date"),
-            'boolean' => $this->isBoolean($data) 
-                ?: array_push($this->validationResult, "$data is not a valid boolean"),
-            'required' => $this->isRequired($data) 
-                ?: array_push($this->validationResult, "$data is required"),
+            'email' => !$this->isEmail($data) 
+                ? array_push($this->validationResult, "$data is not a valid email") : null,
+            'string' => !$this->isStringOnly($data) 
+                ? array_push($this->validationResult, "$data is not a valid string") : null,
+            'number' => !$this->isNumber($data) 
+                ? array_push($this->validationResult, "$data is not a valid number") : null,
+            'float' => !$this->isFloat($data) 
+                ? array_push($this->validationResult, "$data is not a valid float") : null,
+            'alpha' => !$this->isAlpha($data) 
+                ? array_push($this->validationResult, "$data must contain only letters") : null,
+            'alphanumeric' => !$this->isAlphaNumeric($data) 
+                ? array_push($this->validationResult, "$data must be alphanumeric") : null,
+            'url' => !$this->isUrl($data) 
+                ? array_push($this->validationResult, "$data is not a valid URL") : null,
+            'ip' => !$this->isIp($data) 
+                ? array_push($this->validationResult, "$data is not a valid IP address") : null,
+            'ipv4' => !$this->isIpv4($data) 
+                ? array_push($this->validationResult, "$data is not a valid IPv4 address") : null,
+            'ipv6' => !$this->isIpv6($data) 
+                ? array_push($this->validationResult, "$data is not a valid IPv6 address") : null,
+            'json' => !$this->isJson($data) 
+                ? array_push($this->validationResult, "$data is not valid JSON") : null,
+            'date' => !$this->isDate($data) 
+                ? array_push($this->validationResult, "$data is not a valid date") : null,
+            'boolean' => !$this->isBoolean($data) 
+                ? array_push($this->validationResult, "$data is not a valid boolean") : null,
+            'required' => !$this->isRequired($data) 
+                ? array_push($this->validationResult, "$data is required") : null,
             default => null // Ignore unknown rules silently
         };
     }
@@ -321,6 +322,27 @@ class GreenValidator
     }
 
     /**
+     * Validate confirmed rule (for field matching like password confirmation)
+     * Note: This is a simplified implementation. For full functionality,
+     * pass the confirmation value in the format "confirmed:confirmValue"
+     */
+    private function validateConfirmed(mixed $data, string $confirmValue): void
+    {
+        if (!$this->isConfirmed($data, $confirmValue)) {
+            array_push($this->validationResult, "$data does not match confirmation value");
+        }
+    }
+
+    /**
+     * Set the message separator (default is '<br>')
+     */
+    public function setMessageSeparator(string $separator): self
+    {
+        $this->messageSeparator = $separator;
+        return $this;
+    }
+
+    /**
      * Execute validation and return result
      */
     public function execute(): Validation
@@ -328,7 +350,7 @@ class GreenValidator
         $validation = new Validation();
 
         if (count($this->validationResult) > 0) {
-            $message = implode('<br>', $this->validationResult);
+            $message = implode($this->messageSeparator, $this->validationResult);
             $validation->setMessage($message);
             $validation->setIsValid(false);
         } else {

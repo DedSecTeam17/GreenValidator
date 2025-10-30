@@ -1,50 +1,13 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: Mohammed Elamin
-     * Date: 16/12/2018
-     * Time: 10:31
-     */
+/**
+ * Legacy Validation wrapper for backward compatibility
+ * 
+ * This file provides backward compatibility with the old API.
+ * For new projects, use the namespaced version: GreenValidator\Validation
+ * 
+ * @deprecated Use GreenValidator\Validation instead
+ */
 
-    class Validation
-    {
-        private  $isValid;
-        private  $message;
-
-        /**
-         * @return mixed
-         */
-        public function getisValid()
-        {
-            return $this->isValid;
-        }
-
-        /**
-         * @param mixed $isValid
-         */
-        public function setIsValid($isValid): void
-        {
-            $this->isValid = $isValid;
-        }
-
-        /**
-         * @return mixed
-         */
-        public function getMessage()
-        {
-            return $this->message;
-        }
-
-        /**
-         * @param mixed $message
-         */
-        public function setMessage($message): void
-        {
-            $this->message = $message;
-        }
-
-
-
-
-
-    }
+// This file is kept for backward compatibility
+// The actual Validation class is now defined in GreenValidator.php
+// which loads the modern namespaced version

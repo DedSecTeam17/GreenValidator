@@ -1,0 +1,19 @@
+name: Update Packagist
+
+on:
+  push:
+    branches:
+      - master
+  release:
+    types: [published]
+
+jobs:
+  update-packagist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Notify Packagist
+        uses: cknow/packagist-update@v1
+        with:
+          package-url: https://packagist.org/packages/dedsecteam17/green-validator
+          api-token: ${{ secrets.PACKAGIST_TOKEN }}

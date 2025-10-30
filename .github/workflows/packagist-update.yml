@@ -12,8 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Notify Packagist
-        uses: cknow/packagist-update@v1
+        uses: mnavarrocarter/packagist-update@v1.0
         with:
-          package-url: https://packagist.org/packages/dedsecteam17/green-validator
-          api-token: ${{ secrets.PACKAGIST_TOKEN }}
+          username: dedsecteam17
+          api_token: ${{ secrets.PACKAGIST_TOKEN }}

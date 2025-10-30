@@ -1,0 +1,23 @@
+name: Update Packagist
+
+on:
+  push:
+    branches:
+      - master
+  release:
+    types: [published]
+
+jobs:
+  update-packagist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Notify Packagist
+        uses: mnavarrocarter/packagist-update@v1.0
+        with:
+          username: dedsecteam17
+          api_token: ${{ secrets.PACKAGIST_TOKEN }}
+          package_name: dedsecteam17/green-validator
